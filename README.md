@@ -74,7 +74,7 @@ One observation from the prediction that was interesting to me was that there wa
 * EDA: EDA showed us the complexity of the data . More specifically, the sudden change in the trend  and scale of  features etc which make the model prediction more difficult. 
 * Feature Engineering: Added new features like cluster labels (2nd), position count (3rd), number of items (5th) were shown as very important features.  (Total 13 features)
 * Model Training:  XGBoost provided the best performing model and Deep Learning model was the worst performing model. Random Forest was the medium performing one. Logistic Regression and linear regression will not work for our case. 
-* Given the data ( real world complex data with 15000 products ), I believe the r-squared score of 0.61 is good enough number. That basically indicates that the model explains 61% of variation (how the target variable moves with the changes in explanatory variables) in target variable of sales in test data.  In real industry economic application, r-squared value of 0.61 is considered a reasonably good fit. However, ther is a room to improve. 
+* Given the data ( real world complex data with 15000 products ), I believe the r-squared score of 0.61 is good enough number. That basically indicates that the model explains 61% of variation in target variable of sales in test data. Variation indicates how the target variable moves with the changes in explanatory variables. In real industry economic application, r-squared value of 0.61 is considered a reasonably good fit. However, there is a room to improve. 
 * Prediction: About Top 100 best performing products, we predicted 50-60% accurately. The further forecasting horizon, the lower the accuracy.
 
 
