@@ -4,9 +4,9 @@ In this project, I have completed the feature engineering and Machine Learning M
 
 The main goal is to predict best performing products for the last week in terms of revenue using previous weeks data.
 
-The projects contains EDA, Feature Engineering and Model Training parts.
+The projects contains EDA, Feature Engineering, Model Training and Best Performers' Prediction parts.
 
-##EDA
+## EDA
 1. EDA shows that any given producs have multiple positions on the website.
 
 ![image](https://user-images.githubusercontent.com/113545468/233159019-8c396ef9-53c0-47e2-a06b-eae32ea5c630.png)
