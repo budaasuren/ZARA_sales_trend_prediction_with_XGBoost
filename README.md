@@ -40,7 +40,6 @@ The projects contains EDA, Feature Engineering, Model Training and Best Performe
 
 ![Screen Shot 2023-04-19 at 1 57 22 PM](https://user-images.githubusercontent.com/113545468/233160356-8b8ffdbd-29b6-4a2f-b4d4-a4743baa858a.png)
 
-
 ## Model training:
 
 * I used 3 different ML models  which are RF, XG Boost and DL. 
@@ -61,7 +60,6 @@ The projects contains EDA, Feature Engineering, Model Training and Best Performe
 
 * Lastly, I experimented wit Deep Learning and the result was really bad as expected. R score : -3.340532347850811e-06. I only used 10 epoch because I already observed the conversion in the result and the running time would be hours. DL generally does not do well in structured data (works better for images or natural language procession).
 
-
 ## Prediction for the best performing products in the test data:
 Created the function that I reused to calculate the overlapping percentage of predicted vs actual 100 products that produced the most amount of revenue. To do that added the revenue columns for both train and test data.
 
@@ -71,7 +69,6 @@ Created the function that I reused to calculate the overlapping percentage of pr
 One observation from the prediction that was interesting to me was that there was a tendency for prediction accuracy for top 100 performing products to decrease over time. It make sense because we can more accurately predict near future than far future.
 
 ![Screen Shot 2023-04-19 at 2 09 00 PM](https://user-images.githubusercontent.com/113545468/233162820-e735d7fb-41c9-4bdb-808b-a7115e51ebd9.png)
-
 ## Conclusion:
 
 * EDA: EDA showed us the complexity of the data . More specifically, the sudden change in the trend  and scale of  features etc which make the model prediction more difficult. 
