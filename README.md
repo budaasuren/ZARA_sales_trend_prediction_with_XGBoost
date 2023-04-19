@@ -8,11 +8,14 @@ The projects contains EDA, Feature Engineering and Model Training parts.
 
 ##EDA
 1. EDA shows that any given producs have multiple positions on the website.
+
 ![image](https://user-images.githubusercontent.com/113545468/233159019-8c396ef9-53c0-47e2-a06b-eae32ea5c630.png)
+
 2. Similarly, for the block column, EDA shows multiple products belong to a certain block. 
+
 ![image](https://user-images.githubusercontent.com/113545468/233159183-742e31b8-6268-4e42-ba52-afed9da04700.png)
 
-##Feature Engineering 
+## Feature Engineering 
 1. EDA shows that any given producs have multiple positions on the website. So I decided to aggregate the position . Added the several aggregation results into the original data as additional features.
 
 
@@ -38,7 +41,7 @@ The projects contains EDA, Feature Engineering and Model Training parts.
 ![Screen Shot 2023-04-19 at 1 57 22 PM](https://user-images.githubusercontent.com/113545468/233160356-8b8ffdbd-29b6-4a2f-b4d4-a4743baa858a.png)
 
 
-##Model training:
+## Model training:
 
 * I used 3 different ML models  which are RF, XG Boost and DL. 
 * Classification models such as Logistic Regression would not work in this case since the target variable is numerical. 
@@ -59,7 +62,7 @@ The projects contains EDA, Feature Engineering and Model Training parts.
 * Lastly, I experimented wit Deep Learning and the result was really bad as expected. R score : -3.340532347850811e-06. I only used 10 epoch because I already observed the conversion in the result and the running time would be hours. DL generally does not do well in structured data (works better for images or natural language procession).
 
 
-##Prediction for the best performing products in the test data:
+## Prediction for the best performing products in the test data:
 Created the function that I reused to calculate the overlapping percentage of predicted vs actual 100 products that produced the most amount of revenue. To do that added the revenue columns for both train and test data.
 
 ![Screen Shot 2023-04-19 at 2 08 07 PM](https://user-images.githubusercontent.com/113545468/233162640-bf042d99-ff32-4608-b95c-0a35e1e5650b.png)
@@ -69,7 +72,7 @@ One observation from the prediction that was interesting to me was that there wa
 
 ![Screen Shot 2023-04-19 at 2 09 00 PM](https://user-images.githubusercontent.com/113545468/233162820-e735d7fb-41c9-4bdb-808b-a7115e51ebd9.png)
 
-##Conclusion:
+## Conclusion:
 
 * EDA: EDA showed us the complexity of the data . More specifically, the sudden change in the trend  and scale of  features etc which make the model prediction more difficult. 
 * Feature Engineering: Added new features like cluster labels (2nd), position count (3rd), number of items (5th) were shown as very important features.  (Total 13 features)
