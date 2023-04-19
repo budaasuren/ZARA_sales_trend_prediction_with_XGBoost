@@ -37,13 +37,25 @@ Feature Engineering
 
 
 Model training:
-Experimented with RF and the r score was 0.4.
-Experimented with XG Boost (basically more advanced version of RF or tree based algoritims) . R score was 0.5.(Model training with XGBoost (experiment1: n_estimators=100, max_depth=7)
-# Model training with XGBoost (experiment2: n_estimators=200, max_depth=10) and the r score increased to 0.59
-# Model training with XGBoost (experiment 3: n_estimators=300, max_depth=10) and the r score increased to 0.60
-# Model building with XG boost with fewer features ( removed the least important features hoping it will give higher r score) . the r score increased to 0.61 . I stopped the experiments here with XG Boost as we can clearly see the results has converged already and it is obvious that it will not improve much with further optimizations. This will our best model.
-Lastly, I experimented wit Deep Learning and the result was really bad as expected. R score : -3.340532347850811e-06. I only used 10 epoch because I already observed the conversion in the result and the running time would be hours. DL generally does not do well in structured data (works better for images or natural language procession).
-Just for your information, I did not experiment with logistic regression or other classification algorithms because our project is not for classifications (those algorithms won’t work for us). Also did not do linear regression because this will go very wrong as we can not normalize out data using dummy variables (0 ,1). Too many product and categories and linear regression will suffer from dimensional issue. The reason is that we have over 15000 products to convert. For our project, tree based models work perfectly as they do not depend on data normalization since they consider each regressor independently unlike linear regression which regressors will have interdependency with each other where data normalization is necessary (if you are interested, pls do some reading why that is the case, it is just how they work basically, I can not explain nicely here).
+
+* I used 3 different ML models  which are RF, XG Boost and DL. 
+* Classification models such as Logistic Regression would not work in this case since the target variable is numerical. 
+* Also I did not experiment with linear regression because this will go very wrong as we were not able to normalize the categorical variables using dummy variables (0 ,1). The reason is that the dataset has over 15000 products to convert. Even I convert them, linear regression will still suffer from dimensional issue. 
+* For this project, tree based models work better as they do not depend on data normalization.  These models consider each regressor independently unlike linear regression which regressors will have interdependency with each other where data normalization is necessary.
+
+![image](https://user-images.githubusercontent.com/113545468/233161088-d9a38e5b-c6da-4f72-ae1d-5f629e31dab9.png)
+
+
+![Screen Shot 2023-04-19 at 2 00 19 PM](https://user-images.githubusercontent.com/113545468/233161040-559e5b8e-8b09-43a8-b416-5e93ae6c159b.png)
+
+* Experimented with RF and the r score was 0.4.
+* Experimented with XG Boost and R score was 0.5.(Model training with XGBoost (experiment1: n_estimators=100, max_depth=7)
+* Model training with XGBoost (experiment2: n_estimators=200, max_depth=10) and the r score increased to 0.59.
+*  Model training with XGBoost (experiment 3: n_estimators=300, max_depth=10) and the r score increased to 0.60.
+* Model building with XG boost with fewer features ( removed the least important features hoping it will give higher r score) . The r score increased to 0.61 . I stopped the experiments here with XG Boost as I can clearly see the results has converged already and it is obvious that it will not improve much with further optimizations. This will the best model.
+* Lastly, I experimented wit Deep Learning and the result was really bad as expected. R score : -3.340532347850811e-06. I only used 10 epoch because I already observed the conversion in the result and the running time would be hours. DL generally does not do well in structured data (works better for images or natural language procession).
+
+
 Prediction:
 Created the function that I reused to calculate the overlapping percentage of predicted vs actual 100 products that produced the most amount of revenue. To do that added the revenue columns for both train and test data.
 One observation from the prediction that was interesting to me was that there was a tendency for prediction accuracy for top 100 performing products to decrease over time. It make sense because we can more accurately predict near future than far future.
